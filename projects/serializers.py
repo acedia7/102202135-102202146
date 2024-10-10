@@ -8,6 +8,15 @@ class ProjectSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ['project_id', 'created_by', 'created_at', 'updated_at']
 
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+
+        # 确保图片 URL 使用 https
+        if 'image' in representation and representation['image']:
+            representation['image'] = representation['image'].replace('http://', 'https://')
+
+        return representation
+
 class ProjectMemberSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectMember
