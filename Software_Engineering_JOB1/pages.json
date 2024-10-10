@@ -1,0 +1,234 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path" : "pages/login/login",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/message/message",
+			"style" : 
+			{
+				"navigationBarTitleText": "联系人",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/person/donate",
+			"style" : 
+			{
+				"navigationBarTitleText": "个人捐赠",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/home/find_friend",
+			"style" : 
+			{
+				"navigationBarTitleText": "推荐列表",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/find_project/know_more",
+			"style" : 
+			{
+				"navigationBarTitleText": "了解更多",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/find_project/find_project",
+			"style" : 
+			{
+				"navigationBarTitleText": "查找项目",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/home/home",
+			"style" : 
+			{
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/home/teammate",
+			"style" : 
+			{
+				"navigationBarTitleText": "项目详情",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		
+		{
+			"path" : "pages/home/project_setting",
+			"style" : 
+			{
+				"navigationBarTitleText": "项目详情",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/home/publish_project",
+			"style" : 
+			{
+				"navigationBarTitleText": "发布项目",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/register/id_test",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/register/register_fail",
+			"style" :
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/register/register_success",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/register/register",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/message/contactDetail",
+			"style" : 
+			{
+				"navigationBarTitleText": "私聊",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/person/person",
+			"style" : 
+			{
+				"navigationBarTitleText": "个人中心",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/person/about_us",
+			"style" : 
+			{
+				"navigationBarTitleText": "关于我们",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/person/account_security",
+			"style" : 
+			{
+				"navigationBarTitleText": "账户安全",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/person/feedback",
+			"style" : 
+			{
+				"navigationBarTitleText": "反馈建议",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/person/personal_info",
+			"style" : 
+			{
+				"navigationBarTitleText": "个人信息",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/person/system_settings",
+			"style" : 
+			{
+				"navigationBarTitleText": "系统设置",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/home/look",
+			"style" : 
+			{
+				"navigationBarTitleText": "项目详情",
+				"navigationBarBackgroundColor": "#A3C1C6",
+				"navigationBarTextStyle": "black"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	    "color": "#666666",
+	    "selectedColor": "#0094FF",  // 修改选中后字体颜色
+	    "backgroundColor": "#FFFFFF",
+	    "borderStyle": "black",
+		
+	    "fontSize": "16px",  // 添加 fontSize 属性，调整字体大小
+	    "list": [
+	      {
+	        "pagePath": "pages/home/home",
+	        "iconPath": "/static/icons/home.png",
+	        "selectedIconPath": "/static/icons/home_light.png",
+	        "text": "首页"
+	      },
+	      {
+	        "pagePath": "pages/find_project/find_project",
+	        "iconPath": "/static/icons/find_project.png",
+	        "selectedIconPath": "/static/icons/find_project_light.png",
+	        "text": "查找项目"
+	      },
+	      {
+	        "pagePath": "pages/message/message",
+	        "iconPath": "/static/icons/message.png",
+	        "selectedIconPath": "/static/icons/message_light.png",
+	        "text": "消息"
+	      },
+	      {
+	        "pagePath": "pages/person/person",
+	        "iconPath": "/static/icons/person.png",
+	        "selectedIconPath": "/static/icons/person_light.png",
+	        "text": "个人"
+	      }
+	    ]
+	},
+	"uniIdRouter": {}
+}
