@@ -3,11 +3,13 @@ import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
+from rest_framework.permissions import IsAuthenticated
+
 from .models import User
 import random
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.decorators import login_required
-
+from rest_framework.decorators import api_view, permission_classes
 
 # 邮箱验证码缓存字典
 email_verification_codes = {}
@@ -174,7 +176,8 @@ def login(request):
     return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 @csrf_exempt
-@login_required
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
 def update_profile(request):
     if request.method == 'POST':
         data = json.loads(request.body)
@@ -193,7 +196,8 @@ def update_profile(request):
     return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 
-@login_required
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
 @csrf_exempt  # 根据需要免除 CSRF 检查
 def get_user_profile(request):
     if request.method == 'GET':
@@ -217,7 +221,8 @@ def get_user_profile(request):
     return JsonResponse({'error': 'Invalid request method'}, status=405)
 
 
-@login_required
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])  # 确保用户已认证
 @csrf_exempt  # 视需求决定是否跳过CSRF验证
 def upload_avatar(request):
     if request.method == 'POST' and request.FILES.get('avatar'):
