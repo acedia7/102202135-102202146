@@ -66,7 +66,14 @@ def send_chat_invitation(request):
         message=message
     )
 
-    return Response({"message": "Chat invitation sent successfully."}, status=status.HTTP_201_CREATED)
+    return Response({"message": "Chat invitation sent successfully.",
+                     'data': {
+                         "send": invitation.sender,
+                         "receiver": invitation.receiver,
+                         "project": invitation.project,
+                         "message": invitation.message
+                     }
+    }, status=status.HTTP_201_CREATED)
 
 
 @api_view(['POST'])
